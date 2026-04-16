@@ -13,18 +13,19 @@
         <nav>
             <div class="logo">🌭 SausageTech</div>
             <div class="nav-buttons">
-                <button class="btn btn-primary" onclick="showNotification('Каталог открыт!')">Каталог</button>
-                <button class="btn btn-secondary" onclick="showNotification('О нас загружается...')">О нас</button>
-                <button class="btn btn-accent" onclick="showNotification('Контакты готовы!')">Контакты</button>
-                <button class="btn btn-primary" onclick="showNotification('Корзина пуста пока что!')">Корзина</button>
-                <button class="btn btn-secondary" onclick="showNotification('Профиль пользователя...')">Профиль</button>
+                <a href="#home" class="btn btn-primary">Главная</a>
+                <a href="#catalog" class="btn btn-secondary">Каталог</a>
+                <a href="#about" class="btn btn-accent">О нас</a>
+                <a href="#contacts" class="btn btn-primary">Контакты</a>
+                <button class="btn btn-secondary" onclick="showNotification('Корзина пуста пока что!')">Корзина</button>
                 <button class="btn btn-accent" onclick="showNotification('Настройки сохранены!')">Настройки</button>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <!-- Главная секция -->
+        <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Сосиски в тесте будущего</h1>
                 <p>Инновационные технологии приготовления • Квантовое тесто • Нейросетевые сосиски</p>
@@ -50,7 +51,8 @@
             </div>
         </section>
 
-        <section class="products-section">
+        <!-- Каталог -->
+        <section id="catalog" class="products-section">
             <h2 class="section-title">Наши инновационные продукты</h2>
             <div class="products-grid">
                 <div class="product-card">
@@ -139,46 +141,97 @@
             </div>
         </section>
 
-        <section class="features-section">
-            <h2 class="section-title">Почему выбирают нас</h2>
+        <!-- О нас -->
+        <section id="about" class="features-section">
+            <h2 class="section-title">О SausageTech</h2>
+            <div class="about-content" style="max-width: 900px; text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Добро пожаловать в <strong>Sausage Tech Innovation Lab</strong> — первую в мире высокотехнологичную столовую, 
+                    где сосиски в тесте создаются с помощью квантовых вычислений и нейросетевого анализа вкусов!
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; color: var(--secondary);">
+                    🏭 <strong>Наша история:</strong><br>
+                    Всё началось в 2042 году, когда группа учёных-энтузиастов задалась вопросом: 
+                    "А что если сделать самую совершенную сосиску в тесте во Вселенной?" 
+                    После 10 000 экспериментов и 5 миллионов дегустаций родилась SausageTech.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; color: var(--accent);">
+                    🔬 <strong>Наша лаборатория:</strong><br>
+                    В нашем исследовательском центре работают 50 шеф-поваров, 30 data scientist'ов 
+                    и один настоящий ИИ, который лично тестирует каждую партию теста. 
+                    Мы используем только органическое тесто из пшеницы, выращенной на вертикальных фермах, 
+                    и сосиски от проверенных поставщиков с рейтингом 5+.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">
+                    🌟 <strong>Наши ценности:</strong><br>
+                    • Инновации в каждом укусе<br>
+                    • Качество без компромиссов<br>
+                    • Скорость доставки быстрее света<br>
+                    • Экологичность производства<br>
+                    • Любовь к сосискам в каждом сотруднике
+                </p>
+            </div>
             <div class="features-grid">
                 <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Молниеносная доставка</h3>
-                    <p>Доставляем быстрее скорости света (почти)</p>
-                    <button class="btn btn-primary btn-small" onclick="showNotification('Рассчитываем время доставки...')">Рассчитать</button>
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Команда экспертов</h3>
+                    <p>Лучшие шеф-повара мира работают над рецептами</p>
+                    <button class="btn btn-primary btn-small" onclick="showNotification('Познакомиться с командой...')">Узнать больше</button>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Гарантия качества</h3>
-                    <p>100% гарантия или вернем деньги в двойном размере</p>
-                    <button class="btn btn-secondary btn-small" onclick="showNotification('Гарантия активирована!')">Активировать</button>
+                    <div class="feature-icon">🏆</div>
+                    <h3>Награды</h3>
+                    <p>15 международных наград за инновации в фудтехе</p>
+                    <button class="btn btn-secondary btn-small" onclick="showNotification('Список наград...')">Посмотреть</button>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🤖</div>
-                    <h3>ИИ поддержка</h3>
-                    <p>Наш искусственный интеллект поможет с выбором 24/7</p>
-                    <button class="btn btn-accent btn-small" onclick="showNotification('ИИ подключается...')">Спросить ИИ</button>
+                    <div class="feature-icon">🌱</div>
+                    <h3>Эко-производство</h3>
+                    <p>Zero waste производство и углеродно-нейтральная доставка</p>
+                    <button class="btn btn-accent btn-small" onclick="showNotification('Эко-отчёт загружается...')">Эко-отчёт</button>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Экологичность</h3>
-                    <p>Упаковка разлагается быстрее, чем вы съедите сосиску</p>
-                    <button class="btn btn-primary btn-small" onclick="showNotification('Эко-статистика загружается...')">Узнать больше</button>
+                    <div class="feature-icon">💝</div>
+                    <h3>Любовь клиентов</h3>
+                    <p>98% положительных отзывов по всему миру</p>
+                    <button class="btn btn-primary btn-small" onclick="showNotification('Отзывы загружаются...')">Читать отзывы</button>
                 </div>
             </div>
         </section>
 
-        <section class="cta-section">
-            <h2 class="section-title">Готовы попробовать будущее?</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 2rem; color: var(--secondary);">
-                Присоединяйтесь к тысячам довольных клиентов уже сегодня!
-            </p>
-            <div class="cta-buttons">
-                <button class="mega-button" onclick="megaOrder()">🚀 ЗАКАЗАТЬ ВСЁ</button>
-                <button class="btn btn-primary" style="padding: 1.5rem 3rem; font-size: 1.2rem;" onclick="showNotification('Промокод применен: SAUSAGE2024!')">Промокод</button>
-                <button class="btn btn-secondary" style="padding: 1.5rem 3rem; font-size: 1.2rem;" onclick="showNotification('Подписка оформлена!')">Подписаться</button>
-                <button class="btn btn-accent" style="padding: 1.5rem 3rem; font-size: 1.2rem;" onclick="showNotification('Реферальная ссылка скопирована!')">Пригласить друга</button>
+        <!-- Контакты -->
+        <section id="contacts" class="cta-section">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="contact-container" style="display: flex; gap: 3rem; flex-wrap: wrap; justify-content: center; max-width: 1200px;">
+                <div class="contact-info" style="flex: 1; min-width: 300px;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--primary);">📍 Наши контакты</h3>
+                    <div style="text-align: left; font-size: 1.1rem; line-height: 2;">
+                        <p>🏢 <strong>Адрес:</strong> г. Москва, ул. Сосисочная, д. 42, стр. 1</p>
+                        <p>📞 <strong>Телефон:</strong> +7 (999) SAUSAGE (728-7243)</p>
+                        <p>✉️ <strong>Email:</strong> hello@sausagetech.ru</p>
+                        <p>⏰ <strong>Режим работы:</strong> Ежедневно с 9:00 до 21:00</p>
+                        <p>💬 <strong>Telegram:</strong> @sausagetech_support</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">Мы в соцсетях:</h4>
+                        <div class="social-buttons">
+                            <button class="social-btn" onclick="showNotification('Переход в Telegram...')">✈️</button>
+                            <button class="social-btn" onclick="showNotification('Переход в VK...')">📘</button>
+                            <button class="social-btn" onclick="showNotification('Переход в YouTube...')">📺</button>
+                            <button class="social-btn" onclick="showNotification('Переход в Instagram...')">📷</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form" style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 20px; backdrop-filter: blur(10px);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">📝 Напишите нам</h3>
+                    <form onsubmit="event.preventDefault(); showNotification('Сообщение отправлено! Мы свяжемся с вами в течение 5 минут.');">
+                        <input type="text" placeholder="Ваше имя" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: none; border-radius: 10px; background: rgba(255,255,255,0.1); color: var(--light); font-size: 1rem;">
+                        <input type="email" placeholder="Ваш Email" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: none; border-radius: 10px; background: rgba(255,255,255,0.1); color: var(--light); font-size: 1rem;">
+                        <input type="tel" placeholder="Ваш телефон" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: none; border-radius: 10px; background: rgba(255,255,255,0.1); color: var(--light); font-size: 1rem;">
+                        <textarea placeholder="Ваше сообщение" rows="4" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: none; border-radius: 10px; background: rgba(255,255,255,0.1); color: var(--light); font-size: 1rem; resize: vertical;"></textarea>
+                        <button type="submit" class="mega-button" style="width: 100%;">🚀 Отправить</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
